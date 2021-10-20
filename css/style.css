@@ -155,7 +155,7 @@ a {
 
 .navbar-footer a img {
     padding-right: 16px;
-}
+} 
 
 .top-bar header {
     padding: 16px 48px 16px 32px;
@@ -167,7 +167,7 @@ a {
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    color: #b3b3b3;
+    color: #fff;
     background-color: rgba(0,0,0, .7);
 }
 
