@@ -6,6 +6,11 @@ a {
     text-decoration: none !important;
 }
 
+button {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 ::-webkit-scrollbar {
     width: 16px;
 }
@@ -51,6 +56,18 @@ a {
     height: 100%;
     min-height: 0;
     overflow-y: scroll;
+}
+
+.main .margin-top {
+    position: sticky;
+    top: 0;
+    height: 60px;
+}
+
+.main .main-container {
+    padding: 16px 32px;
+    flex: 1;
+    min-height: 0;
 }
 
 .player {
@@ -162,7 +179,7 @@ a {
 }
 
 .top-bar header .icons-action-left button {
-    margin-right: 16px;
+    margin-right: 2px;
     border: none;
     height: 32px;
     width: 32px;
@@ -171,3 +188,70 @@ a {
     background-color: rgba(0,0,0, .7);
 }
 
+.top-bar .menu .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-bar .menu button {
+    border-radius: 23px;
+    height: 32px;
+    border: none;
+    color: #fff;
+    padding: 2px;
+    background-color: rgba(0,0,0, .7);
+}
+
+.top-bar .menu:hover > .dropdown-menu, .top-bar .menu:hover > button {
+    display: block;
+    background-color: #282828;
+}
+
+.top-bar .menu button:hover {
+    background-color: #282828;
+}
+
+.top-bar .menu button span {
+    margin-left: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 110px;
+}
+
+.top-bar .menu .dropdown-menu {
+    background-color: #282828;
+    margin-top: 8px;
+    box-shadow: 0 4px 4px rgba(0,0,0, .7);
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0, .1);
+}
+
+.top-bar .menu .dropdown-menu .dropdown-item {
+    color: #fff;
+    opacity: .6;
+    padding: 3px 20px;
+    line-height: 32px;
+}
+
+.top-bar .menu .dropdown-menu .dropdown-item:hover {
+    opacity: 1;
+    background-color: #333;
+}
+
+.top-bar .menu .dropdown-menu .dropdown-divider {
+    height: 0;
+    border-top: 1px solid #404040;
+    margin: 0;
+}
+
+.main .title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    color: #fff;
+}
