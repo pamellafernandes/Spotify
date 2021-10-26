@@ -670,7 +670,8 @@
                                 </div>
 
                                 <div class="player-bar">
-                                    <input class="slide"type="range" min="1" max="50" value="50">
+                                    <div class="music-bar"></div>
+                                    <input class="slide" onmouseup="moveProgress()" type="range" min="1" max="100" value="1" >
                                 </div>
 
                                 <div class="progress-time">
@@ -704,18 +705,7 @@
             </footer>
         </div>
     </div>
-    
-    <script>
-        let main = document.getElementById('main');
-        let header = document.getElementById('header-overlay');
-        main.addEventListener('scroll', function(event) {
-            var scroll = this.scrollTop;
-            if(scroll < 60) {
-                header.style.opacity = '.'+scroll;
-            } else {
-                header.style.opacity = 1;
-            }
-        })
-    </script>
+
+    <script src="player.js"></script>
 </body>
 </html>
