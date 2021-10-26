@@ -391,6 +391,7 @@ footer .icon {
 }
 
 .play{
+    transform: scale(0.9);
     border-radius: 30px;
     padding: 10px;
     background-color: #535353;
