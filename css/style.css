@@ -394,8 +394,27 @@ footer .icon {
     transform: scale(0.9);
     border-radius: 30px;
     padding: 10px;
-    background-color: #535353;
+    background-color: #fff;
 }
+
+
+.play:hover {
+    filter: brightness(1.6);
+    transform: scale(1);
+}
+
+.play:hover .icon-player {
+    transform: scale(1.3);
+}
+
+input[type=range]::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #1b2845;    
+}
+
 
 footer .play {
     width: 40x;
@@ -428,6 +447,19 @@ footer .progress-bar, footer .progress {
     height: 4px;
     width: 100%;
 }
+
+footer .player-bar {
+    display: flex;
+    border-radius: 2px;
+    height: 15px;
+    width: 100%;
+}
+
+footer .player-bar .slide {
+    width: 86%;
+    position: absolute;
+}
+
 
 footer .progress {
     background-color: #b3b3b3;
