@@ -3,6 +3,24 @@
   outline: none !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 ::-webkit-scrollbar {
@@ -447,6 +465,16 @@ body footer .play:hover .icon-player {
 }
 
 body footer .player-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   max-width: 900px;
 }
@@ -483,14 +511,56 @@ body footer .player-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 2px;
-  height: 15px;
-  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  height: 5px;
+  width: 700px;
+  background-color: #535353;
+  overflow: hidden;
 }
 
-body footer .slide {
-  width: 86%;
+body footer .player-bar .music-bar {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+body footer .player-bar .slide {
+  max-width: 700px;
+  width: 100%;
   position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 5px;
+  outline: none;
+  height: 5px;
+  background: none;
+}
+
+body footer .player-bar .slide:hover::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+body footer .player-bar .slide::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 0px;
+  height: 0px;
+}
+
+body footer .player-bar:hover .music-bar {
+  background-color: #1db954;
 }
 
 body footer .volume-bar {
