@@ -32,6 +32,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: #121212;
 }
 
@@ -370,12 +371,12 @@ body .main .list .card .card-text {
 }
 
 body .main .list .card .btn-play {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
   position: absolute;
-  right: 16px;
-  bottom: 16px;
+  right: 32px;
+  bottom: 105px;
   opacity: 0;
-  -webkit-transition: 350ms;
-  transition: 350ms;
 }
 
 body .main .list .card .btn-play button {
@@ -389,12 +390,22 @@ body .main .list .card .btn-play button {
   font-size: 12px;
 }
 
+body .main .list .card .btn-play button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: default;
+}
+
 body .main .list .card .btn-play button img {
   padding: 12px;
 }
 
 body .main .list .card:hover > .btn-play {
   opacity: 1;
+  -webkit-animation: rise .5s linear;
+          animation: rise .5s linear;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 body .main .list .col-12 {
@@ -507,6 +518,35 @@ body footer .progress {
   width: 40%;
 }
 
+body footer .slide {
+  max-width: 700px;
+  width: 100%;
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 5px;
+  outline: none;
+  height: 5px;
+  background: none;
+}
+
+body footer .slide:hover::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+body footer .slide::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 0px;
+  height: 0px;
+}
+
 body footer .player-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,40 +570,52 @@ body footer .player-bar .music-bar {
   background-color: #fff;
 }
 
-body footer .player-bar .slide {
-  max-width: 700px;
-  width: 100%;
-  position: absolute;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-radius: 5px;
-  outline: none;
-  height: 5px;
-  background: none;
-}
-
-body footer .player-bar .slide:hover::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-}
-
-body footer .player-bar .slide::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
-  width: 0px;
-  height: 0px;
-}
-
 body footer .player-bar:hover .music-bar {
   background-color: #1db954;
 }
 
 body footer .volume-bar {
   width: 84px;
+}
+
+body footer .volume-bar .progress-bar .progress {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 84px;
+}
+
+body footer .volume-bar .progress-bar .slide.volume {
+  width: 100%;
+  max-width: 84px;
+}
+
+body footer .volume-bar .progress-bar:hover .progress {
+  background-color: #1db954;
+}
+
+@-webkit-keyframes rise {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0) scale(1.01);
+  }
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0) scale(1.01);
+  }
 }
 /*# sourceMappingURL=estilo.css.map */

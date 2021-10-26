@@ -29,6 +29,7 @@
 }
 
 body {
+    overflow-x: hidden;
     background-color: #121212;
 
 .color-default {
@@ -323,11 +324,11 @@ body {
                 opacity: .6;
             }
             .btn-play {
+                transition: all .3s ease;
                 position: absolute;
-                right: 16px;
-                bottom: 16px;
+                right: 32px;
+                bottom: 105px;
                 opacity: 0;
-                transition: 350ms;
                 button {
                     color: #fff;
                     background-color: #1db954;
@@ -337,6 +338,10 @@ body {
                     height: 40px;
                     padding: 0;
                     font-size: 12px;
+                    &:hover{
+                        transform: scale(1.1);
+                        cursor: default;
+                    }
                     img {
                         padding: 12px;
                     }
@@ -345,6 +350,8 @@ body {
             }
             &:hover > .btn-play {
                 opacity: 1;
+                animation: rise .5s linear;
+                transform: scale(1.02);
             }
 
         }
@@ -444,6 +451,30 @@ footer {
         width: 40%;
     }
 
+    .slide {
+        max-width: 700px;
+        width: 100%;
+        position: absolute;
+        appearance: none;
+        border-radius: 5px;
+        outline: none;
+        height: 5px;
+        background: none;
+        &:hover{
+            &::-webkit-slider-thumb{
+                appearance: none;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #fff;    
+            }
+        }
+        &::-webkit-slider-thumb{
+            appearance: none;
+            width: 0px;
+            height: 0px;   
+        }
+    }
     .player-bar {
         display: flex;
         align-items: center;
@@ -461,30 +492,7 @@ footer {
             background-color: #fff;
         }   
 
-        .slide {
-            max-width: 700px;
-            width: 100%;
-            position: absolute;
-            appearance: none;
-            border-radius: 5px;
-            outline: none;
-            height: 5px;
-            background: none;
-            &:hover{
-                &::-webkit-slider-thumb{
-                    appearance: none;
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background: #fff;    
-                }
-            }
-            &::-webkit-slider-thumb{
-                appearance: none;
-                width: 0px;
-                height: 0px;   
-            }
-        }
+        
         &:hover{
             .music-bar{
                 background-color: #1db954;
@@ -494,7 +502,37 @@ footer {
 
     .volume-bar {
         width: 84px;
+
+     .progress-bar {
+         .progress {
+             transform: translateX(-100%);
+             width: 84px;
+         }
+         .slide.volume {
+            width: 100%;
+            max-width: 84px;
+         }
+         &:hover {
+             .progress {
+                 background-color: #1db954;
+             }
+         }
+     }
+
     }
 }
 
+}
+
+@keyframes rise {
+    0%{
+        opacity:0;
+        -webkit-transform:translateY(10px);
+        transform:translateY(10px)
+    }
+    to{
+        opacity:1;
+        -webkit-transform:translateY(0);
+        transform:translateY(0) scale(1.01);
+    }
 }

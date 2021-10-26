@@ -671,7 +671,7 @@
 
                                 <div class="player-bar">
                                     <div class="music-bar"></div>
-                                    <input class="slide" onchange="moveBar()" type="range" min="1" max="100" value="1" >
+                                    <input class="slide" oninput="moveBar()" type="range" min="1" max="100" value="1" >
                                 </div>
 
                                 <div class="progress-time">
@@ -697,6 +697,7 @@
                         <div class="volume-bar">
                             <div class="progress-bar">
                                 <div class="progress"></div>
+                                <input class="slide volume" oninput="moveVolumeBar()" type="range" min="1" max="100" value="1">
                             </div>
                         </div>
                     </div>
@@ -706,6 +707,7 @@
         </div>
     </div>
 
-    <script src="player.js"></script>
+    <script src="scripts/player.js"></script>
+    <script src="scripts/volume.js"></script>
 </body>
 </html>
