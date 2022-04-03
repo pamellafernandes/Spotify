@@ -21,11 +21,17 @@
 ### Inspiração
 <p> O projeto foi inspirado na web player do Spotify.</p>
 
+### Git Pages
+https://pamellafernandes.github.io/Spotify/
+
 
 
 <h2 align="center"> 
 	 🚀 Projeto concluído com sucesso... 🚀
 </h2>
+
+
+
 
 <h2 align="center">Abaixo um vídeo do projeto. 📹</h2>
 
