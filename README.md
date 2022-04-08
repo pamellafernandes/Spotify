@@ -26,6 +26,7 @@
 </h2>
 
 
+<h6>Obs: Criado para tela Desktop</h6>
 ### Git Pages
 https://pamellafernandes.github.io/Spotify/
 
