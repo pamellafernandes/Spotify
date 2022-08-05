@@ -28,6 +28,7 @@
 
 <h6>Obs: Criado para tela Desktop</h6>
 ### Deploy
+https://spotify-pf.vercel.app
 
 
 
